@@ -1,5 +1,7 @@
 # 7seg
 
+https://xy7-simulation.netlify.app/
+
 This is a minimal Vite/Vue app to test possible layouts for the [AlfaZeta XY7 panels](https://flipdots.com/en/xy7-flip-digits-panels/).
 
 Inspired by [https://ksawerykomputery.com/](https://ksawerykomputery.com/tools/flipdigits-player)
