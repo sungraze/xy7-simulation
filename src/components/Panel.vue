@@ -32,13 +32,12 @@ const bitClasses = (num) => {
 .digit {
   display: block;
 
-  --digit-width: 100px * v-bind('digitSize');
-  --digit-height: 148px * v-bind('digitSize');
+  --digit-width: 40px * v-bind('digitSize');
+  --digit-height: 59px * v-bind('digitSize');
   --digit-px: calc(var(--digit-width) * 0.2);
   --digit-py: calc(var(--digit-height) * 0.26);
 
   width: calc(var(--digit-width) + var(--digit-px) * 2);
-  min-width: calc(var(--digit-width) + var(--digit-px) * 2);
   height: calc(var(--digit-height) + var(--digit-py) * 2);
   padding: var(--digit-py) var(--digit-px);
 

@@ -26,15 +26,10 @@ let panelData = computed(() => {
 let interval = null
 
 watchEffect(() => {
-  if (regenerate.value) {
-    // in case regenRate changes
-    clearInterval(interval)
+  clearInterval(interval)
 
-    interval = setInterval(() => {
-      seed.value = Math.random()
-    }, regenRate.value)
-  } else {
-    clearInterval(interval)
+  if (regenerate.value) {
+    interval = setInterval(() => (seed.value = Math.random()), regenRate.value)
   }
 })
 </script>
@@ -95,34 +90,34 @@ watchEffect(() => {
 
   <svg>
     <defs>
-      <symbol id="digit" viewBox="0 0 100 147.49" fill="currentColor">
+      <symbol id="digit" viewBox="0 0 40 59" fill="currentColor">
         <polygon
           style="fill: var(--bit-0)"
-          points="31.59 64.95 71.52 64.95 68.72 80.86 28.82 80.86 31.59 64.95"
+          points="12.64 25.98 28.61 25.98 27.49 32.34 11.53 32.34 12.64 25.98"
         />
         <polygon
           style="fill: var(--bit-1)"
-          points="10.28 67.35 18.43 17.8 29.52 2.63 35.27 21.41 27.16 71.03 10.28 67.35"
+          points="4.11 26.94 7.37 7.12 11.81 1.05 14.11 8.56 10.86 28.41 4.11 26.94"
         />
         <polygon
           style="fill: var(--bit-2)"
-          points="26.43 74.32 17.22 126.82 5.74 144.4 0 126.82 9.56 70.63 26.43 74.32"
+          points="10.57 29.73 6.89 50.73 2.3 57.76 0 50.73 3.82 28.25 10.57 29.73"
         />
         <polygon
           style="fill: var(--bit-3)"
-          points="19.86 128.5 62.34 128.5 68.09 147.49 8.07 147.49 19.86 128.5"
+          points="7.94 51.4 24.94 51.4 27.24 59 3.23 59 7.94 51.4"
         />
         <polygon
           style="fill: var(--bit-4)"
-          points="89.55 82.38 81.56 129.23 70.48 144.4 64.73 125.61 72.68 78.7 89.55 82.38"
+          points="35.82 32.95 32.62 51.69 28.19 57.76 25.89 50.24 29.07 31.48 35.82 32.95"
         />
         <polygon
           style="fill: var(--bit-5)"
-          points="73.4 75.41 82.64 21.01 94.26 2.63 100 20.21 90.28 79.1 73.4 75.41"
+          points="29.36 30.16 33.06 8.4 37.7 1.05 40 8.08 36.11 31.64 29.36 30.16"
         />
         <polygon
           style="fill: var(--bit-6)"
-          points="80.28 18.99 37.8 18.99 32.04 0 92.07 0 80.28 18.99"
+          points="32.11 7.6 15.12 7.6 12.82 0 36.83 0 32.11 7.6"
         />
       </symbol>
     </defs>
